@@ -1,0 +1,184 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 2rem;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-family: Brush Script MT, cursive;
+  font-size: 2.4rem;
+}
+
+.contacts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+#addContactBtn {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.2rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#addContactBtn:hover {
+  background-color: #0056b3;
+}
+
+#contactList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background-color: #007BFF;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: white;
+}
+
+.contact-item.selected {
+  background-color: #28a745;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 12px;
+  border: 2px solid white;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.contact-phone {
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 300px;
+  margin: 0 auto 2rem;
+}
+
+button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.8rem;
+  font-size: 1.4rem;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.5rem;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button.active {
+  background-color: #28a745 !important;
+}
+
+.status {
+  font-size: 1.5rem;
+  background-color: #e0e0e0;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.modal input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.modal-actions button {
+  flex: 1;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#cancelModal {
+  background-color: #ccc;
+}
+
+#confirmModal {
+  background-color: #007BFF;
+  color: white;
+}
